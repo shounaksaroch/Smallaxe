@@ -29,6 +29,7 @@ jobs:
   github-aktions:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    environment: test
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -48,5 +49,6 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Runcommand to print output of variables
         run: |
+          echo variable in this environment are ==> $env
           echo this is variable ${vars.TENANT_ID}
           echo test, and deploy your project.
