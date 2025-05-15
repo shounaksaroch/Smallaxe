@@ -51,7 +51,7 @@ jobs:
           echo test, and deploy your project.
 
       # Runs a set of commands using the runners shell
-      - name: Runcommand to print output of variables
+      - name: Runcommand to print output of context
         run: |
-          echo this is variable ${vars.TENANT_ID}
-          echo test, and deploy your project.
+          echo this is github context: "$GITHUB_CONTEXT"
+          echo this is env context: "$ENV_CONTEXT"
