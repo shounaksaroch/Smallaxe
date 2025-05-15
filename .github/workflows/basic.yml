@@ -15,7 +15,17 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "github-aktions"
+  # If condiction job that's to demo how variables work
+  if-Windows-else:
+    runs-on: ubuntu-latest
+    steps:
+      - name: condition 1
+        if: runner.os == 'Windows'
+        run: echo "The operating system on the runner is $env:RUNNER_OS."
+      - name: condition 2
+        if: runner.os != 'Windows'
+        run: echo "The operating system on the runner is not Windows, it's $RUNNER_OS."
+  # This workflow contains a job called "github-aktions"
   github-aktions:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
