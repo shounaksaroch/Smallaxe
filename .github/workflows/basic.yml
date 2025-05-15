@@ -49,6 +49,5 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Runcommand to print output of variables
         run: |
-          echo variable in this environment are ==> $env
           echo this is variable ${vars.TENANT_ID}
           echo test, and deploy your project.
