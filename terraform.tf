@@ -12,7 +12,8 @@ terraform {
 
 # Configure the Azure Active Directory Provider
 provider "azuread" {
-  client_id     = "${{ secrets.APP_ID  }}"
-  client_secret = "${{ secrets.APP_SECRET }}"
-  tenant_id = "${{ vars.TENANT_ID }}"
+  ## Commented out as variables are configured at the repo level
+  ##  client_id     = "${{ secrets.APP_ID  }}"
+  ##client_secret = "${{ secrets.APP_SECRET }}"
+  ##tenant_id = "${{ vars.TENANT_ID }}"
 }
