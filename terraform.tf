@@ -12,5 +12,7 @@ terraform {
 
 # Configure the Azure Active Directory Provider
 provider "azuread" {
-  tenant_id = "570c8a00-bc2e-466a-918b-a6e4e6326c02"
+  client_id     = "${{ secrets.APP_ID  }}"
+  client_secret = "${{ secrets.APP_SECRET }}"
+  tenant_id = "${{ vars.TENANT_ID }}"
 }
