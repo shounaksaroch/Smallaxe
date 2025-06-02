@@ -42,15 +42,15 @@
 #       with:
 #         cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
 
-name: 'Terraform'
+name: 'Terraform + GITHUB'
 
 on:
   push:
-  pull_request:
-    branches: [ "main" ]
+    branches:
+      - main
 
-permissions:
-  contents: read
+#permissions:
+#  contents: read
 
 jobs:
   terraform:
